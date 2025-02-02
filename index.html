@@ -7,6 +7,41 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Pet Store</title>
   <script src="https://kit.fontawesome.com/6019ae2934.js" crossorigin="anonymous"></script>
+  <style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .animate-fadeIn {
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slideIn {
+        animation: slideIn 1s ease-out;
+    }
+
+    @keyframes scaleUp {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    .animate-scaleUp {
+        animation: scaleUp 1.5s ease-out;
+    }
+
+    @keyframes bounceSlow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+    .animate-bounceSlow {
+        animation: bounceSlow 2s infinite;
+    }
+</style>
+
+
 </head>
 
 <body class="bg-cream">
@@ -36,14 +71,14 @@
 <main>
 
   <section class="flex flex-col md:flex-row items-center justify-between px-10 py-16 bg-white">
-    <div class="md:w-1/2 space-y-6">
-      <h1 class="text-4xl font-bold text-gray-900">Pamper Your Pet,<br>Because They Deserve the Best</h1>
-      <p class="text-gray-600 text-lg">Discover a world of treats, toys, and essentials handpicked for your furry
+    <div class="md:w-1/2 space-y-6 animate-fadeIn">
+      <h1 class="text-4xl font-bold text-gray-900 leading-tight animate-slideIn">Pamper Your Pet,<br>Because They Deserve the Best</h1>
+      <p class="text-gray-600 text-lg animate-fadeIn">Discover a world of treats, toys, and essentials handpicked for your furry
         friends. Shop now and make tails wag with joy!</p>
-      <button class="bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-600">Find a pet</button>
+      <button class="bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-600 transition transform hover:scale-105 animate-bounceSlow">Find a pet</button>
     </div>
-    <div class="md:w-1/2 mt-6 md:mt-0">
-      <img src="./c1-assets/cat-big.png" alt="Cute cat" class="w-full h-auto">
+    <div class="md:w-1/2 mt-6 md:mt-0 animate-fadeIn">
+      <img src="./c1-assets/cat-big.png" alt="Cute cat" class="w-full h-auto animate-scaleUp">
     </div>
   </section>
   <section class="px-10 py-16">
